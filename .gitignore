@@ -1,1 +1,2 @@
-commands.txt
+spotifyenv/required_keys.py
+spotifyenv/client_secret.json
