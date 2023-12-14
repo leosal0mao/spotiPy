@@ -1,0 +1,7 @@
+## on the spotifyenv folder, create a required_keys.py file, and add these fields:
+## see how to get them in the project README
+
+SPOTIPY_CLIENT_ID = 
+SPOTIPY_CLIENT_SECRET = 
+YOUTUBE_KEY = 
+FLASK_SECRET_KEY = 
