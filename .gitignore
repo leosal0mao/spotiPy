@@ -1,2 +1,6 @@
 spotifyenv/required_keys.py
 spotifyenv/client_secret.json
+token.pickle
+spotify_tracks.txt
+youtube_links.txt
+youtube_videos_ids.txt

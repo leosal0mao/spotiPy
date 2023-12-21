@@ -23,12 +23,12 @@ def get_spotify_playlist_songs(playlist_url):
         track_list.append(track)
         
     ##remove any old tracks.txt file for a better performance and cleaner environment
-    if os.path.exists('tracks.txt'):
-        os.remove('tracks.txt')
+    if os.path.exists('spotify_tracks.txt'):
+        os.remove('spotify_tracks.txt')
     else: 
         pass
 
-    with open(r'tracks.txt', 'w') as fp:   
+    with open(r'spotify_tracks.txt', 'w') as fp:   
         fp.write('\n'.join(str(track) for track in track_list))
 
 
