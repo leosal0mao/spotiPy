@@ -77,6 +77,10 @@ Add additional notes about how to deploy this on a live system
 api reference
 
 https://developers.google.com/resources/api-libraries/documentation/youtube/v3/python/latest/index.html
+
 https://spotipy.readthedocs.io/en/2.22.1/#getting-started
+
 https://developers.google.com/youtube/v3/docs/search/list?hl=pt-br
+
+https://pytube.io/en/latest/user/install.html
 
