@@ -84,3 +84,4 @@ https://developers.google.com/youtube/v3/docs/search/list?hl=pt-br
 
 https://pytube.io/en/latest/user/install.html
 
+https://github.com/jiaaro/pydub#installation -> mp3 conversion and ffmpeg installation
