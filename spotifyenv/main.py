@@ -1,16 +1,21 @@
 import sys
 
-sys.path.append("spotifyenv/spotify_calls")
-sys.path.append("spotifyenv/youtube_calls")
+sys.path.append("spotifyenv/main_scripts")
 
-from spotify_search import *
-from search_youtube_videos import *
-from generate_video_link import *
+from main_scripts.add_videos_youtube_playlist import *
+from main_scripts.download_videolist_script import *
 
-# get_spotify_playlist_songs("spotify:playlist:5X3IDSizPjZKIt5j1uerIj")
+print("What you want to do?")
+print("1.Convert spotify playlist to youtube playlist")
+print("2.Convert spotify playlist to mp3")
+print("-----------------")
 
-# video_id = search_videos_and_return_id("slowdive alife")
+inputNumber = input("Choose an option: ")
 
-# video_link = generate_video_link(video_id)
-# print(video_link)
-# search_youtube_videos("alife slowdive")
+match inputNumber:
+    case "1":
+        add_videos_to_youtube_playlist()
+    case "2":
+        download_mp3_playlist()
+    case _:
+        print("Invalid Option! Choose another.")

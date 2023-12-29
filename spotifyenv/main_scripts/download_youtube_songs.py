@@ -31,6 +31,3 @@ def download_youtube_songs(url):
 
     for webmpath in glob.iglob(os.path.join(path_to_download_pc, "*.webm")):
         os.remove(webmpath)
-    # for item in webm_deletion_path:
-    #     if item.endswith(".webm"):
-    #         os.remove(os.path.join(webm_deletion_path, item))

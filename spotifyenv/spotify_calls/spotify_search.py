@@ -10,26 +10,30 @@ spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(cl
 
 def get_spotify_playlist_songs(playlist_url):
     
-    playlist_info = spotify.playlist_items(
-    playlist_id=playlist_url,
-    fields="items",
-    )
-    
-    playlist_tracks = playlist_info["items"]
+    try:
+        playlist_info = spotify.playlist_items(
+        playlist_id=playlist_url,
+        fields="items",
+        )
 
-    track_list = []
-    for track_info in playlist_tracks:
-        track = f'{track_info["track"]["name"]} - {track_info["track"]["artists"][0]['name']}'
-        track_list.append(track)
-        
-    ##remove any old tracks.txt file for a better performance and cleaner environment
-    if os.path.exists('spotify_tracks.txt'):
-        os.remove('spotify_tracks.txt')
-    else: 
-        pass
+        playlist_tracks = playlist_info["items"]
 
-    with open(r'spotify_tracks.txt', 'w') as fp:   
-        fp.write('\n'.join(str(track) for track in track_list))
+        track_list = []
+        for track_info in playlist_tracks:
+            track = f'{track_info["track"]["name"]} - {track_info["track"]["artists"][0]['name']}'
+            track_list.append(track)
+            
+        ##remove any old tracks.txt file for a better performance and cleaner environment
+        if os.path.exists('spotify_tracks.txt'):
+            os.remove('spotify_tracks.txt')
+        else: 
+            pass
+
+        with open(r'spotify_tracks.txt', 'w') as fp:   
+            fp.write('\n'.join(str(track) for track in track_list))
+    except Exception as e:
+        print(f"Unexpected {e=}, {type(e)=}")
+        raise
 
 
     
