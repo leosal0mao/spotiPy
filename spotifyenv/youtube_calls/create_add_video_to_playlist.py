@@ -7,7 +7,7 @@ from required_keys import *
 from youtube_authentication import *
 from googleapiclient.discovery import build
 
-credentials = get_existing_credentials()
+credentials = get_authenticated_service()
 
 
 def create_youtube_playlist_and_id(playlist_name):

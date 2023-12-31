@@ -30,3 +30,6 @@ def add_videos_to_youtube_playlist():
 
     for video_id in video_id_list:
         add_video_to_playlist(video_id, youtubePlaylistId)
+
+
+add_videos_to_youtube_playlist()
